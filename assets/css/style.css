@@ -1,6 +1,6 @@
 * {
     color: darkred;
-    font-family: 'Nosifer', cursive;;
+    font-family: 'Nosifer', cursive;
    }
 
 body {
@@ -121,6 +121,7 @@ span {
     padding: 4px;
     border-radius: 4px;
     background-color: black;
+    padding-color: black;
 }
 
 .dead {
@@ -136,20 +137,22 @@ span {
     top: 70%;
     left: 45%;
     font-size: 24px;
-    font-weight: bolder;
-    width: 90px;
-    height: 50px;
+    width: 180px;
+    height: 180px;
     padding: 4px;
-    border-radius: 4px;
+    border-radius: 4px; 
     z-index: 4;
+    background-color: gold;
+    font-family: 'Nosifer', cursive;
+
 }
 
 #victory {
     z-index: 3;
     height: 50%;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    left: 30%;
+    top: 20%;
 }
 
 #defeat {
@@ -157,7 +160,7 @@ span {
     height: 50%;
     position: absolute;
     left: 30%;
-    top: 25%;
+    top: 20%;
 }
 
 @media screen and (max-width: 980px) {

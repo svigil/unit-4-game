@@ -12,16 +12,16 @@ $(document).ready(function() {
 // Create character attributes
     
     var jack = {
-        healthPoints: 120,
-        attack: 20,
-        baseAttackPoints: 20,
+        healthPoints: 125,
+        attack: 18,
+        baseAttackPoints: 18,
         counterAttackPoints: 14
     }
     
     var oogie = {
-        healthPoints: 140,
-        attack: 13,
-        baseAttackPoints: 13,
+        healthPoints: 110,
+        attack: 31,
+        baseAttackPoints: 31,
         counterAttackPoints: 15
     }
     
@@ -34,19 +34,19 @@ $(document).ready(function() {
     
     var santa = {
         healthPoints: 160,
-        attack: 12,
-        baseAttackPoints: 12,
-        counterAttackPoints: 12
+        attack: 10,
+        baseAttackPoints: 10,
+        counterAttackPoints: 13
     }
     
     var zero = {
-        healthPoints: 100,
-        attack: 31,
-        baseAttackPoints: 31,
+        healthPoints: 115,
+        attack: 25,
+        baseAttackPoints: 25,
         counterAttackPoints: 16
     }
     
-//First click to choose player character    
+//Select what character you would like to fight    
 $(".characters").click(function() {
     if (userChoices !== [] && player === undefined) {
         player = $(this).attr("dataChar");
@@ -59,7 +59,7 @@ $(".characters").click(function() {
         $(".player").append(document.getElementById(player));
         $("#userPlayer").text("Choose your opponent");
     } 
-    //Second click to choose current opponent
+    //Select who you would to try to kill
     else if (currentEnemy === undefined) {
         for (item in enemyChoices) {
             if (enemyChoices[item] === $(this).attr("dataChar")) {
@@ -78,12 +78,12 @@ $("#fight").click(function() {
     eval(currentEnemy).healthPoints = eval(currentEnemy).healthPoints - eval(player).attack;
     eval(player).attack = eval(player).attack + eval(player).baseAttackPoints;
     $("#jackHealth").text("Health: " + jack.healthPoints);
-    $("#oogieJoeHealth").text("Health: " + oogieJoe.healthPoints);
+    $("#oogieHealth").text("Health: " + oogie.healthPoints);
     $("#sallyHealth").text("Health: " + sally.healthPoints);
     $("#santaHealth").text("Health: " + santa.healthPoints);
     $("#zeroHealth").text("Health: " + zero.healthPoints);
     if (eval(player).healthPoints <= 0) {
-        $("#userPlayer").text("You lost!");
+        $("#userPlayer").text("Try another Holiday - You're Dead");
         $("#fight").addClass("hidden");
         $("#restart").removeClass("hidden");
         $("#defeat").removeClass("hidden");
@@ -102,7 +102,7 @@ $("#fight").click(function() {
         };
         currentEnemy = undefined;
         if (enemyChoices.length === 0) {
-            $("#userPlayer").text("You are victorious!");
+            $("#userPlayer").text("You didn't die!");
             $("#victory").removeClass("hidden");
             $("#fight").addClass("hidden");
             $("#restart").removeClass("hidden");
