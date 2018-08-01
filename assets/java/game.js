@@ -12,7 +12,7 @@ $(document).ready(function() {
 // Create character attributes
     
     var jack = {
-        healthPoints: 125,
+        healthPoints: 130,
         attack: 18,
         baseAttackPoints: 18,
         counterAttackPoints: 14
@@ -20,13 +20,13 @@ $(document).ready(function() {
     
     var oogie = {
         healthPoints: 110,
-        attack: 31,
-        baseAttackPoints: 31,
+        attack: 27,
+        baseAttackPoints: 27,
         counterAttackPoints: 15
     }
     
     var sally = {
-        healthPoints: 110,
+        healthPoints: 115,
         attack: 23,
         baseAttackPoints: 23,
         counterAttackPoints: 18
@@ -35,12 +35,12 @@ $(document).ready(function() {
     var santa = {
         healthPoints: 160,
         attack: 10,
-        baseAttackPoints: 10,
+        baseAttackPoints: 12,
         counterAttackPoints: 13
     }
     
     var zero = {
-        healthPoints: 115,
+        healthPoints: 105,
         attack: 25,
         baseAttackPoints: 25,
         counterAttackPoints: 16

@@ -149,7 +149,7 @@ span {
 
 #victory {
     z-index: 3;
-    height: 50%;
+    height: 40%;
     position: absolute;
     left: 30%;
     top: 20%;
@@ -157,7 +157,7 @@ span {
 
 #defeat {
     z-index: 3;
-    height: 50%;
+    height: 40%;
     position: absolute;
     left: 30%;
     top: 20%;
