@@ -9,45 +9,46 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Nosifer|Poor+Story" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <h1>Nightmare Before Dying</h1>
-    <h2>A Ghoulish RPG</h2>
+    <h1><font color="red">Nightmare Before Dying</font></h1>
+    <h2><font color="red">A Ghoulish RPG</font></h2>
     <!-- Hold all of the fighters with their displayed specs -->
     <div id="container">
-        <span>Choose Your Corpslike Champion</span><br>
+        <span id = "userPlayer">Choose Your Corpslike Champion</span><br>
         <div id="jack" class="floatLeft">
-            <img id="jackpic" class="characters" src="assets/images/jack.jpg" height="100px" alt="jack" data-char="jack">
+            <img id="jackpic" class="characters" src="assets/images/jack.jpg" height="100px" alt="jack" dataChar="jack">
             <br>
             <span id="jackHealth">Health: 120</span>
             <br>
             <span>The Pumpkin King</span>
         </div>
         <div id="oogie" class="floatLeft">
-            <img id="oogiepic" class="characters" src="assets/images/oogie.jpg" height="100px" alt="oogie" data-char="oogie">
+            <img id="oogiepic" class="characters" src="assets/images/oogie.jpg" height="100px" alt="oogie" dataChar="oogie">
             <br>
             <span id="oogieHealth">Health: 120</span>
             <br>
             <span>Oogie Boogie Man</span>
         </div>
         <div id="sally" class="floatLeft">
-            <img id="sallypic" class="characters" src="assets/images/sally.jpg" height="100px" alt="sally" data-char="sally">
+            <img id="sallypic" class="characters" src="assets/images/sally.jpg" height="100px" alt="sally" dataChar="sally">
             <br>
             <span id="sallyHealth">Health: 120</span>
             <br>
             <span>Sally</span>
         </div>
         <div id="santa" class="floatLeft">
-            <img id="santapic" class="characters" src="assets/images/santa.jpg" height="100px" alt="santa" data-char="santa">
+            <img id="santapic" class="characters" src="assets/images/santa.jpg" height="100px" alt="santa" dataChar="santa">
             <br>
             <span id="santaHealth">Health: 120</span>
             <br>
             <span>Sandy Claws</span>
         </div>
         <div id="zero" class="floatLeft">
-            <img id="zeropic" class="characters" src="assets/images/zero.jpg" height="100px" alt="zero" data-char="zero">
+            <img id="zeropic" class="characters" src="assets/images/zero.jpg" height="100px" alt="zero" dataChar="zero">
             <br>
             <span id="zeroHealth">Health: 120</span>
             <br>
@@ -63,19 +64,19 @@
     
     <!-- Create a stage for your current character that is fighting -->
     
-    <div class="fight-section">
+    <div class="fightSection">
         <button id="fight" class="hidden">FIGHT!</button>
     </div>
     <!-- Create a stage for your current character that is fighting -->
-    <div class="defender">
-        <span id="current-enemy">Current opponent</span>
+    <div class="opponent">
+        <span id="currentEnemy">Current opponent</span>
         <br>
     </div>
 
 <!-- Create a space for a win notification to appear -->
 
 <div id="victory" class="hidden">
-    <img src="assets/images/fireworks.gif" alt="fireworks">
+    <img src="assets/images/happyjack.jpg" alt="happyjack" height="100px" alt="jack" dataChar="jack">
 </div>
 
 <!-- Create a space for a death notification to appear -->
@@ -88,14 +89,14 @@
 <!-- Create a space for a death picture to appear -->
 
     <div id="defeat" class="hidden">
-        <img src="assets/images/white-flag.gif" alt="white flag">
+        <img src="assets/images/dead_santa.jpg" alt="dead_santa" height="100px" alt="jack" dataChar="jack">
     </div>
 
 <!-- Create button to restart the game -->
 <button id="restart" class="hidden">Restart</button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/javas/game.js"></script>
+    <script src="assets/java/game.js"></script>
     
 
 

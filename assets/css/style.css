@@ -1,0 +1,268 @@
+* {
+    color: darkred;
+    font-family: 'Nosifer', cursive;;
+   }
+
+body {
+    background-image: url("../images/NightmareXmas.jpg");
+    background-size: 100%;
+    z-index: 1;
+    }   
+
+img {
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.floatLeft {
+    float: left;
+    padding-bottom: 25px;
+}
+
+.floatRight {
+    float: right;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+#userPlayer {
+    margin: 15px;
+    width: 500px;
+    text-align: center;
+}
+
+#container {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 32%;
+}
+
+#jack {
+    width: 180px;
+    height: 200px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#oogie {
+    width: 150px;
+    height: 200px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#sally {
+    width: 150px;
+    height: 200px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#santa {
+    width: 140px;
+    height: 200px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#zero {
+    width: 140px;
+    height: 200px;
+    margin: 5px auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.player {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin: 0 auto;
+}
+
+.fightSection {
+    position: absolute;
+    top: 40%;
+    left: 48%;
+}
+
+.opponent {
+    position: absolute;
+    top: 30%;
+    left: 58%;
+}
+
+#fight {
+    font-size: 18px;
+    font-weight: bolder;
+    width: 90px;
+    height: 50px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: black;
+}
+
+.dead {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    text-align: right;
+    width: 28%;
+}
+
+#restart {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    font-size: 24px;
+    font-weight: bolder;
+    width: 90px;
+    height: 50px;
+    padding: 4px;
+    border-radius: 4px;
+    z-index: 4;
+}
+
+#victory {
+    z-index: 3;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+#defeat {
+    z-index: 3;
+    height: 50%;
+    position: absolute;
+    left: 30%;
+    top: 25%;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        background-size: 150%;
+    }
+
+    h1, h2 {
+        width: 100%;
+    }
+
+    img {
+        height: 50%;
+    }
+
+    #container {
+        top: 10%;
+    }
+
+    #taco {
+        height: 130px;
+    }
+
+    #sloppyJoe {
+        height: 160px;
+    }
+
+    #pineapple {
+        height: 160px;
+    }
+
+    #pizza {
+        height: 140px;
+    }
+
+    .dead {
+        top: 10%;
+    }
+
+    .player {
+        top: 20%;
+        left: 42%;
+    }
+
+    .opponent {
+        top: 45%;
+        left: 42%;
+    }
+    
+    .floatRight {
+        height: 170px;
+    }
+
+    #victory {
+        height: 50%;
+        left: 15%;
+    }
+
+    #defeat {
+        height: 50%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-size: 400%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    img {
+        z-index: 2;
+    }
+
+    #container {
+        width: 100%;
+        position: absolute;
+    }
+
+    .dead {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        height: 200px;
+    }
+
+    .player {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .fightSection {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .opponent {
+        position: static;
+        margin-top: 15px;
+    }
+}
