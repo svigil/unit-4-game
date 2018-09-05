@@ -34,7 +34,7 @@ $(document).ready(function() {
     
     var santa = {
         healthPoints: 160,
-        attack: 10,
+        attack: 14,
         baseAttackPoints: 12,
         counterAttackPoints: 13
     }

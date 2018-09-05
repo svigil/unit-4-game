@@ -1,12 +1,16 @@
 * {
     color: darkred;
-    font-family: 'Nosifer', cursive;
+    /* font-family: 'Nosifer', cursive; */
    }
 
 body {
     background-image: url("../images/NightmareXmas.jpg");
     background-size: 100%;
     z-index: 1;
+    text-shadow: -1px -1px white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
     }   
 
 img {
@@ -17,6 +21,7 @@ h1 {
     text-align: center;
     font-size: 48px;
     margin-top: 20px;
+    background-color: transparent;
 }
 
 h2 {
@@ -47,15 +52,23 @@ span {
 
 #userPlayer {
     margin: 15px;
-    width: 500px;
+    /* width: 500px; */
     text-align: center;
 }
 
-#container {
+/* #container {
     position: absolute;
     top: 20%;
     left: 3%;
     width: 32%;
+} */
+
+.container {
+    /* position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 32%; */
+    background-color: transparent;
 }
 
 #jack {
@@ -95,22 +108,32 @@ span {
 }
 
 .player {
-    position: absolute;
-    top: 30%;
-    left: 35%;
+    float: left;
+    position: relative;
+    /* top: 30%;
+    left: 35%; */
     margin: 0 auto;
 }
 
-.fightSection {
-    position: absolute;
+#arena {
+    float: left;
+    position: relative;
     top: 40%;
-    left: 48%;
+    left: 30%;
+}
+
+.fightSection {
+    float: left;
+    position: relative;
+    /* top: 40%;
+    left: 48%; */
 }
 
 .opponent {
-    position: absolute;
-    top: 30%;
-    left: 58%;
+    float: left;
+    position: relative;
+    /* top: 30%;
+    left: 58%; */
 }
 
 #fight {
@@ -125,11 +148,11 @@ span {
 }
 
 .dead {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    text-align: right;
-    width: 28%;
+    /* position: absolute; */
+    /* top: 20%;
+    right: 5%; */
+    text-align: center;
+    /* width: 28%; */
 }
 
 #restart {
@@ -159,8 +182,8 @@ span {
     z-index: 3;
     height: 40%;
     position: absolute;
-    left: 30%;
-    top: 20%;
+    /* left: 30%; */
+    top: 50%;
 }
 
 @media screen and (max-width: 980px) {
@@ -180,21 +203,26 @@ span {
         top: 10%;
     }
 
-    #taco {
+    #jack {
         height: 130px;
     }
 
-    #sloppyJoe {
+    #oogie {
         height: 160px;
     }
 
-    #pineapple {
+    #sally {
         height: 160px;
     }
 
-    #pizza {
+    #santa {
         height: 140px;
     }
+
+    #zero {
+        height: 140px;
+    }
+
 
     .dead {
         top: 10%;

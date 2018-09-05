@@ -8,96 +8,162 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Compiled and minified Javascript Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Nosifer|Poor+Story" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Adding image to the background and making it static to scroll in the background */
+        body {
+            /* background-image: url("/images/NightmareXmas.jpg"); */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Metamorphous', cursive;
+        }
+
+        /* Making text legible for the background */
+        #text {
+            color: black;
+            text-shadow: -1px -1px white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
+            font-family: 'Source Code Pro', monospace;
+        }
+    </style>
 </head>
 
 <body>
-    <h1><font color="red">Nightmare Before Dying</font></h1>
-    <h2><font color="red">A Ghoulish RPG</font></h2>
-    <!-- Hold all of the fighters with their displayed specs -->
-    <div id="container">
-        <span id = "userPlayer">Choose Your Corpslike Champion</span><br>
-        <div id="jack" class="floatLeft">
-            <img id="jackpic" class="characters" src="assets/images/jack.jpg" height="100px" alt="jack" dataChar="jack">
-            <br>
-            <span id="jackHealth">Health: 130</span>
-            <br>
-            <span>The Pumpkin King</span>
+    <h1>
+        <font color="red">Nightmare Before Dying</font>
+    </h1>
+    <h2>
+        <font color="red">A Ghoulish RPG</font>
+    </h2>
+    <div class="container" id="text">
+        <div class="row">
+            <div class="col s6 m6">
+                <div class="icon-block">
+                    <br>
+                    <!-- Hold all of the fighters with their displayed specs -->
+                    <!-- <div id="container" class="col s4 m6"> -->
+
+                    <h3 id="userPlayer">Choose Your Corpslike Champion</h3><br>
+                    <div id="jack" class="floatLeft">
+                        <img id="jackpic" class="characters" src="assets/images/jack.jpg" height="100px" alt="jack" dataChar="jack">
+                        <br>
+                        <span id="jackHealth">Health: 130</span>
+                        <br>
+                        <span>The Pumpkin King</span>
+                    </div>
+                    <div id="oogie" class="floatLeft">
+                        <img id="oogiepic" class="characters" src="assets/images/oogie.jpg" height="100px" alt="oogie" dataChar="oogie">
+                        <br>
+                        <span id="oogieHealth">Health: 110</span>
+                        <br>
+                        <span>Oogie Boogie Man</span>
+                    </div>
+                    <div id="sally" class="floatLeft">
+                        <img id="sallypic" class="characters" src="assets/images/sally.jpg" height="100px" alt="sally" dataChar="sally">
+                        <br>
+                        <span id="sallyHealth">Health: 115</span>
+                        <br>
+                        <span>Sally</span>
+                    </div>
+                    <div id="santa" class="floatLeft">
+                        <img id="santapic" class="characters" src="assets/images/santa.jpg" height="100px" alt="santa" dataChar="santa">
+                        <br>
+                        <span id="santaHealth">Health: 160</span>
+                        <br>
+                        <span>Sandy Claws</span>
+                    </div>
+                    <div id="zero" class="floatLeft">
+                        <img id="zeropic" class="characters" src="assets/images/zero.jpg" height="100px" alt="zero" dataChar="zero">
+                        <br>
+                        <span id="zeroHealth">Health: 115</span>
+                        <br>
+                        <span>Zero</span>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
         </div>
-        <div id="oogie" class="floatLeft">
-            <img id="oogiepic" class="characters" src="assets/images/oogie.jpg" height="100px" alt="oogie" dataChar="oogie">
-            <br>
-            <span id="oogieHealth">Health: 110</span>
-            <br>
-            <span>Oogie Boogie Man</span>
+    </div>
+    <div class="container" id="text">
+        <div class="row">
+            <div class="col s6 m6">
+                <div class="icon-block">
+
+                    <!-- Need a stage for selected player to attack  -->
+                    <div class="container" id="arena">
+                        <div class="row">
+                            <div class="col s4 m6">
+                                <div class="player">
+                                    <span id="currentPlayer">Your Champion</span>
+                                    <br>
+                                </div>
+
+                                <!-- Create a stage for your current character that is fighting -->
+
+                                <div class="fightSection">
+                                    <button id="fight" class="hidden">FIGHT!</button>
+                                </div>
+                                <!-- Create a stage for your current character that is fighting -->
+                                <div class="opponent">
+                                    <span id="currentEnemy">Current opponent</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="sally" class="floatLeft">
-            <img id="sallypic" class="characters" src="assets/images/sally.jpg" height="100px" alt="sally" dataChar="sally">
-            <br>
-            <span id="sallyHealth">Health: 115</span>
-            <br>
-            <span>Sally</span>
+    </div>
+
+    <!-- Create a space for a win notification to appear -->
+
+    <div id="victory" class="hidden">
+        <img src="assets/images/gifwin.gif" alt="win" height="425px">
+    </div>
+
+    <!-- Create a space for a death notification to appear -->
+    <div class="container" id="text">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <div class="dead">
+                        <span>Even more dead</span>
+                        <br>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="santa" class="floatLeft">
-            <img id="santapic" class="characters" src="assets/images/santa.jpg" height="100px" alt="santa" dataChar="santa">
-            <br>
-            <span id="santaHealth">Health: 160</span>
-            <br>
-            <span>Sandy Claws</span>
+    </div>
+
+    <!-- Create a space for a death picture to appear -->
+    <div class="container" id="text">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <div id="defeat" class="hidden">
+                        <img src="assets/images/giflose.gif" alt="lost" height="425px">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="zero" class="floatLeft">
-            <img id="zeropic" class="characters" src="assets/images/zero.jpg" height="100px" alt="zero" dataChar="zero">
-            <br>
-            <span id="zeroHealth">Health: 115</span>
-            <br>
-            <span>Zero</span>
-        </div>
-    </div>
-    <!-- Need a stage for selected player to attack  -->
-
-    <div class="player">
-        <span id="currentPlayer">Your Champion</span>
-        <br>
-    </div>
-    
-    <!-- Create a stage for your current character that is fighting -->
-    
-    <div class="fightSection">
-        <button id="fight" class="hidden">FIGHT!</button>
-    </div>
-    <!-- Create a stage for your current character that is fighting -->
-    <div class="opponent">
-        <span id="currentEnemy">Current opponent</span>
-        <br>
     </div>
 
-<!-- Create a space for a win notification to appear -->
+                    <!-- Create button to restart the game -->
+                    <button id="restart" class="hidden">Fight Again if you dare!</button>
 
-<div id="victory" class="hidden">
-    <img src="assets/images/gifwin.gif" alt="win" height="425px">
-</div>
-
-<!-- Create a space for a death notification to appear -->
-
-    <div class="dead">
-        <span>Even more dead</span>
-        <br>
-    </div>
-       
-<!-- Create a space for a death picture to appear -->
-
-    <div id="defeat" class="hidden">
-        <img src="assets/images/giflose.gif" alt="lost" height="425px">
-    </div>
-
-<!-- Create button to restart the game -->
-<button id="restart" class="hidden">Fight Again if you dare!</button>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/java/game.js"></script>
-    
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script src="assets/java/game.js"></script>
 
 
 </body>
